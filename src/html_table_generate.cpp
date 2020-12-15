@@ -12,7 +12,6 @@ bool htmlTableGenerate(string fileName, string tableName, vector<unique_ptr<KeyV
 		LOG_F(ERROR, "Data series is empty (no entries)");
 		return false;	
 	}
-
 	if(not (data.at(0)->getNumValues() > 0))
 	{
 		LOG_F(ERROR, "Data series entries are empty (no key value pairs)");

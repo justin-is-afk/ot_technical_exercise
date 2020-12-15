@@ -13,7 +13,12 @@ bool xmlParse(string fileName, string dataSeriesName, vector<unique_ptr<KeyValue
 
 	if(not result)
 	{
-		LOG_F(ERROR, "\"%s\" Invalid or malformed input data\n", fileName.c_str());
+		LOG_F(ERROR, "\"%s\" Invalid or malformed input data", fileName.c_str());
+		return false;
+	}
+	if(not static_cast<bool>(xmlDoc.child(dataSeriesName.c_str())))
+	{
+		LOG_F(ERROR, "Node <%s> does not exist in \"%s\"", dataSeriesName.c_str(), fileName.c_str());
 		return false;
 	}
 
@@ -39,7 +44,7 @@ bool xmlParse(string fileName, string dataSeriesName, vector<unique_ptr<KeyValue
 		data.push_back(std::move(newEntry));
 	}
 
-	LOG_F(INFO, "<%s> imported data from \"%s\"", xmlDoc.child(dataSeriesName.c_str()).name(), fileName.c_str());
+	LOG_F(INFO, "<%s> data imported from \"%s\"", xmlDoc.child(dataSeriesName.c_str()).name(), fileName.c_str());
 	return true;
 }
 
