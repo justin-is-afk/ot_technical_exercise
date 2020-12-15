@@ -64,8 +64,6 @@ In the event that other formats need be supported, a strategy or factory pattern
 
 Another ask of the exercise was to demonstrate "engineering best practices". On that note, I've included a few error handling cases, test cases as well as some basic logging. Again in the context of an actual project there would certainly be more unit tests; I've only included a few as an example. There should be a [pull request](https://github.com/justin-is-afk/ot_technical_exercise/pull/1/files) open to modify `main` to run the unit tests. Here's the output you can expect, if you re-build the code with that branch and run the tests:
 
-<details><summary>Example Gtest output</sample>
-
 ```
 ~/dev/ot_technical_exercise$ ./xml2html 
 2020-12-15 16:18:15.375 (   0.000s) [        1DEC2740]               main.cpp:10    INFO| Begin XML to HTML Table testing...
@@ -97,8 +95,6 @@ Another ask of the exercise was to demonstrate "engineering best practices". On 
 [  PASSED  ] 4 tests.
 ```
 
-</details>
-
-Regarding my choice of libraries, I'll start with the XML parser. Parsing XML is a solved problem, and as I've stated above I don't think it's the core issue at hand for this exercise. Logging is also a solved problem, so again I've opted to use a library. For the unit tests, I've had good experiences with gtest in the past. Were I writing this code for a real project though, I'm sure I would be using the logging and testing libraries already in place at the organization. I'd also like to note that while the logging I've implemented goes to the console (for simplicity / convenience), I expect it would be done to a file in the context of a project for an organization with existing code and test infrastructure.
+Regarding my choice of libraries, I'll start with the XML parser. Parsing XML is a solved problem, and as I've stated above I don't think it's the core issue at hand for this exercise. Logging is also a solved problem, so again I've opted to use a library. For the unit tests, I've had good experiences with gtest in the past. Were I writing this code for a real project though, I'm sure I would be using the logging and testing libraries already in place at the organization. I'd also like to note that while the logging I've implemented goes to the console (for simplicity / convenience), I expect it would be done to a file in the context of a project for an organization with existing code and test infrastructure. Note that all libraries used are useable in an organization, I made sure to check the licences.
 
 I would love to hear your feedback. I can be reached via email at jlgodson.eng@gmail.com or via cell at `416-828-5336`. Thanks for taking a look!
