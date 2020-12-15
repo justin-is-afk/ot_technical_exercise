@@ -5,6 +5,10 @@
 
 using namespace std;
 
+// Justin's Notes:
+// This is a fairly basic table generator function. Given that the data is pared into an arbitrary vector of KeyValueStringData
+// however, it could be passed into a different output function. For example, instead of an HTML table perhaps the desired output
+// format is JSON or CSV. A strategy pattern could be employed here, as the data itself is not tied to a specific format.
 bool htmlTableGenerate(string fileName, string tableName, vector<unique_ptr<KeyValueStringData>>& data)
 {
 	if(not (data.size() > 0))

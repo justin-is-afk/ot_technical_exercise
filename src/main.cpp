@@ -20,10 +20,11 @@ int main(int argc, char **argv)
 	testConv(fileName, htmlFileName, dataSeriesName);
 
 	// Justin's Notes:
-	// As the exercise called for "engineering best practices" I thought it pertinent to
-	// include some unit tests, as well as a logger. There should be a pull request open in
-	// the github repo, to change `main` to instead run the google test unit tests I've included
-	// in `xml_to_html_test.cpp`.
+	// As the exercise called for "engineering best practices" I thought it appropriate to
+	// include some unit tests, as well as a logger. The logger simply outputs to the console
+	// for simplicity, but could be set to instead log to a file. There should be a pull request 
+	// open in the github repo to change `main` to instead run the google test unit tests that
+	// I've included in `xml_to_html_test.cpp`.
 	//LOG_F(INFO, "Begin XML to HTML Table testing...");
 	//testing::InitGoogleTest(&argc, argv);
 	//return RUN_ALL_TESTS();
