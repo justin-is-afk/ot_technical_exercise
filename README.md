@@ -66,4 +66,4 @@ Another ask of the exercise was to demonstrate "engineering best practices". On 
 
 Regarding my choice of libraries, I'll start with the XML parser. Parsing XML is a solved problem, and as I've stated above I don't think it's the core issue at hand for this exercise. Logging is also a solved problem, so again I've opted to use a library. For the unit tests, I've had good experiences with gtest in the past. Were I writing this code for a real project though, I'm sure I would be using the logging and testing libraries already in place at the organization.
 
-I would love to hear your feedback! I can be reached via email at jlgodson.eng@gmail.com or via cell at `416-828-5336`. Thanks for taking a look!
+I would love to hear your feedback. I can be reached via email at jlgodson.eng@gmail.com or via cell at `416-828-5336`. Thanks for taking a look!
