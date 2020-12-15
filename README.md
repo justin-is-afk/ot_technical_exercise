@@ -58,4 +58,12 @@ You can then run `xml2hml` from the command line. Alternatively, you can run `. 
 
 ### Approach and thought process
 
-todo.
+The original ask was to take an XML file with a "catalog of CDs" and convert it to an HTML file. Upon inspecting the sample XML file, my first thought was "oh, the real problem here is parse in a series of data, and output it in another format". As the original ask was to convert an XML file to an HTML table I've only included that functionality. However, considerations were made to exend the code in the future. XML could be JSON one day, and HTML tables could become CSV files.
+
+In the event that other formats need be supported, a strategy or factory pattern could be employed. I've noted in source code comments where I think each pattern may be appropriate. The data shouldn't care about its format, nor should the user of the data. This was the mentality I had when writing the `KeyValueData` class. Please refer to the source code header files for more comments.
+
+Another ask of the exercise was to demonstrate "engineering best practices". On that note, I've included a few error handling cases, test cases as well as some basic logging. Again in the context of an actual project there would certainly be more unit tests; I've only included a few as an example.
+
+Regarding my choice of libraries, I'll start with the XML parser. Parsing XML is a solved problem, and as I've stated above I don't think it's the core issue at hand for this exercise. Logging is also a solved problem, so again I've opted to use a library. For the unit tests, I've had good experiences with gtest in the past. Were I writing this code for a real project though, I'm sure I would be using the logging and testing libraries already in place at the organization.
+
+I would love to hear your feedback! I can be reached via email at jlgodson.eng@gmail.com or via cell at 416-828-5336. Thanks for taking a look!
